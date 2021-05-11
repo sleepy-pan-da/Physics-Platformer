@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://World/Level_Template.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Level22.gd" type="Script" id=2]
+[ext_resource path="res://Tilesets/Platform.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Tilesets/Anti_gravity.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Tilesets/Bouncy.tscn" type="PackedScene" id=5]
+
+[node name="Level22" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Finish" parent="." index="1"]
+position = Vector2( 416.146, 601.085 )
+
+[node name="Stage_Platforms" type="Node2D" parent="." index="2"]
+
+[node name="Platform" parent="Stage_Platforms" index="0" instance=ExtResource( 3 )]
+position = Vector2( 837.282, 83.541 )
+scale = Vector2( 0.1, 0.2 )
+
+[node name="Platform2" parent="Stage_Platforms" index="1" instance=ExtResource( 3 )]
+position = Vector2( 411.656, 630.643 )
+scale = Vector2( 0.1, 0.2 )
+
+[node name="AntiGravity" type="Node2D" parent="." index="3"]
+
+[node name="Anti_gravity" parent="AntiGravity" index="0" instance=ExtResource( 4 )]
+position = Vector2( 569.064, 331.354 )
+rotation = 1.5708
+scale = Vector2( 0.75, 0.75 )
+
+[node name="Area2D" parent="AntiGravity/Anti_gravity" index="0"]
+gravity_vec = Vector2( 1, 0 )
+
+[node name="Player" parent="." index="4"]
+position = Vector2( 859.581, 52.857 )
+
+[node name="Bouncy" type="Node2D" parent="." index="5"]
+
+[node name="Bouncy" parent="Bouncy" index="0" instance=ExtResource( 5 )]
+position = Vector2( 795.76, 313.433 )
+rotation = 1.5708
+scale = Vector2( 0.415191, 0.135 )
+
+[node name="LevelCounter" parent="." index="6"]
+text = "22/24"
+
+[editable path="AntiGravity/Anti_gravity"]

@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://World/Level_Template.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Credits.gd" type="Script" id=3]
+[ext_resource path="res://Fonts/Roboto/Roboto-Light.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 4 )
+
+[node name="Credits" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="Finish" parent="." index="1"]
+position = Vector2( -309.591, 79.2854 )
+
+[node name="Player" parent="." index="2"]
+position = Vector2( -166.122, 73.6222 )
+
+[node name="LevelCounter" parent="." index="3"]
+text = ""
+
+[node name="Label2" type="Label" parent="." index="4"]
+margin_left = 296.967
+margin_top = 249.605
+margin_right = 336.967
+margin_bottom = 287.605
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="." index="5"]
+margin_left = 296.967
+margin_top = 325.115
+margin_right = 336.967
+margin_bottom = 363.115
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="." index="6"]
+margin_left = 296.967
+margin_top = 383.635
+margin_right = 524.967
+margin_bottom = 421.635
+custom_fonts/font = SubResource( 1 )
+text = "Press r to replay"
+__meta__ = {
+"_edit_use_anchors_": false
+}

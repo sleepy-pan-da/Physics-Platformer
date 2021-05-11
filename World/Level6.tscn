@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Tilesets/Platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Level_Template.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/Level6.gd" type="Script" id=3]
+[ext_resource path="res://Fonts/Roboto/Roboto-Thin.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 4 )
+
+[node name="Level6" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+
+[node name="Finish" parent="." index="1"]
+position = Vector2( 1022.21, 303.91 )
+
+[node name="Player" parent="." index="2"]
+position = Vector2( 158.088, 440.629 )
+
+[node name="Stage_Platforms" type="Node2D" parent="." index="3"]
+
+[node name="Platform" parent="Stage_Platforms" index="0" instance=ExtResource( 1 )]
+position = Vector2( 161.452, 549.946 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Platform2" parent="Stage_Platforms" index="1" instance=ExtResource( 1 )]
+position = Vector2( 1014.12, 340.409 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="LevelCounter" parent="." index="4"]
+text = "6/22"
+
+[node name="Label2" type="Label" parent="." index="5"]
+margin_left = 409.549
+margin_top = 104.768
+margin_right = 748.549
+margin_bottom = 142.768
+custom_fonts/font = SubResource( 1 )
+text = "Do a dash jump!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/physics_platformer.wav-c418a72c95d64d1ab1cd512d0395708b.sample"
+
+[deps]
+
+source_file="res://Music/physics_platformer.wav"
+dest_files=[ "res://.import/physics_platformer.wav-c418a72c95d64d1ab1cd512d0395708b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

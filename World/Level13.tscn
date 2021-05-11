@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Tilesets/Platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Level_Template.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Level13.gd" type="Script" id=4]
+[ext_resource path="res://Tilesets/Bouncy.tscn" type="PackedScene" id=5]
+
+[node name="Level13" instance=ExtResource( 3 )]
+script = ExtResource( 4 )
+
+[node name="Finish" parent="." index="1"]
+position = Vector2( 1130, 82 )
+
+[node name="Player" parent="." index="2"]
+position = Vector2( 86, 64 )
+
+[node name="Stage_Platforms" type="Node2D" parent="." index="3"]
+
+[node name="Platform" parent="Stage_Platforms" index="0" instance=ExtResource( 1 )]
+position = Vector2( 65, 110 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="Platform2" parent="Stage_Platforms" index="1" instance=ExtResource( 1 )]
+position = Vector2( 1121, 110 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="Bouncy" type="Node2D" parent="." index="4"]
+
+[node name="Bouncy" parent="Bouncy" index="0" instance=ExtResource( 5 )]
+position = Vector2( 595, 581.617 )
+scale = Vector2( 0.93375, 0.152304 )
+
+[node name="LevelCounter" parent="." index="5"]
+text = "13/22"

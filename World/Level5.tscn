@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tilesets/Platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Level_Template.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/Level5.gd" type="Script" id=3]
+
+[node name="Level5" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+
+[node name="Finish" parent="." index="1"]
+position = Vector2( 1021.37, 516.981 )
+
+[node name="Player" parent="." index="2"]
+position = Vector2( 215.007, 508.675 )
+
+[node name="Stage_Platforms" type="Node2D" parent="." index="3"]
+
+[node name="Platform" parent="Stage_Platforms" index="0" instance=ExtResource( 1 )]
+position = Vector2( 212.168, 553.207 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Platform2" parent="Stage_Platforms" index="1" instance=ExtResource( 1 )]
+position = Vector2( 599.849, 553.207 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Platform3" parent="Stage_Platforms" index="2" instance=ExtResource( 1 )]
+position = Vector2( 1008.94, 553.207 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Spikes" type="Node2D" parent="." index="4"]
+
+[node name="LevelCounter" parent="." index="5"]
+text = "5/22"

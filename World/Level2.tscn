@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://World/Level_Template.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tilesets/Platform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tilesets/Spike.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Level2.gd" type="Script" id=4]
+
+[node name="Level2" instance=ExtResource( 1 )]
+script = ExtResource( 4 )
+
+[node name="Stage_Platforms" type="Node2D" parent="." index="1"]
+
+[node name="Platform" parent="Stage_Platforms" index="0" instance=ExtResource( 2 )]
+position = Vector2( 589.847, 372.06 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="Finish" parent="." index="2"]
+position = Vector2( 834.413, 291.719 )
+
+[node name="Player" parent="." index="3"]
+position = Vector2( 326.206, 297.642 )
+
+[node name="Spikes" type="Node2D" parent="." index="4"]
+position = Vector2( 0, 1 )
+
+[node name="Spike" parent="Spikes" index="0" instance=ExtResource( 3 )]
+position = Vector2( 484.706, 281.49 )
+
+[node name="Spike2" parent="Spikes" index="1" instance=ExtResource( 3 )]
+position = Vector2( 553.706, 281.49 )
+
+[node name="Spike3" parent="Spikes" index="2" instance=ExtResource( 3 )]
+position = Vector2( 621.706, 281.49 )
+
+[node name="Spike4" parent="Spikes" index="3" instance=ExtResource( 3 )]
+position = Vector2( 690.706, 281.49 )
+
+[node name="LevelCounter" parent="." index="5"]
+text = "2/22"
+
+[editable path="Stage_Platforms/Platform"]
+
+[editable path="Spikes/Spike"]
+
+[editable path="Spikes/Spike2"]

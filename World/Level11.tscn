@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Tilesets/Platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tilesets/Testcube.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/Level_Template.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Level11.gd" type="Script" id=4]
+
+[node name="Level11" instance=ExtResource( 3 )]
+script = ExtResource( 4 )
+
+[node name="Finish" parent="." index="1"]
+position = Vector2( 998.984, 569.082 )
+
+[node name="Player" parent="." index="2"]
+position = Vector2( 219.327, 513.582 )
+
+[node name="Stage_Platforms" type="Node2D" parent="." index="3"]
+
+[node name="Platform2" parent="Stage_Platforms" index="0" instance=ExtResource( 1 )]
+position = Vector2( 619.837, 628.99 )
+scale = Vector2( 1, 0.5 )
+
+[node name="testcube" parent="." index="4" instance=ExtResource( 2 )]
+position = Vector2( 989.038, 481.29 )
+mass = 3.0
+
+[node name="Sprite" parent="testcube" index="0"]
+scale = Vector2( 0.75, 0.75 )
+
+[node name="CollisionPolygon2D" parent="testcube" index="1"]
+scale = Vector2( 0.75, 0.75 )
+
+[node name="LevelCounter" parent="." index="5"]
+margin_top = 10.0
+margin_bottom = 48.0
+text = "11/22"
+
+[editable path="testcube"]

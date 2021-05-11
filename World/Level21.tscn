@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://World/Level_Template.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tilesets/Platform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tilesets/Anti_gravity.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Level21.gd" type="Script" id=4]
+[ext_resource path="res://Tilesets/Spike.tscn" type="PackedScene" id=5]
+
+[node name="Level21" instance=ExtResource( 1 )]
+script = ExtResource( 4 )
+
+[node name="Finish" parent="." index="1"]
+position = Vector2( 739.201, 212.993 )
+rotation = 1.5708
+
+[node name="AntiGravity" type="Node2D" parent="." index="2"]
+position = Vector2( 198.598, 19.6632 )
+
+[node name="Anti_gravity" parent="AntiGravity" index="0" instance=ExtResource( 3 )]
+position = Vector2( 171.683, 388.876 )
+rotation = 1.5708
+
+[node name="Area2D" parent="AntiGravity/Anti_gravity" index="0"]
+gravity_vec = Vector2( 1, 0 )
+
+[node name="Anti_gravity2" parent="AntiGravity" index="1" instance=ExtResource( 3 )]
+position = Vector2( 662.498, 362.603 )
+rotation = -1.5708
+
+[node name="Area2D" parent="AntiGravity/Anti_gravity2" index="0"]
+gravity_vec = Vector2( -1, 0 )
+
+[node name="Stage_Platforms" type="Node2D" parent="." index="3"]
+position = Vector2( 198.598, 19.6632 )
+
+[node name="Platform" parent="Stage_Platforms" index="0" instance=ExtResource( 2 )]
+position = Vector2( 416.276, 559.09 )
+scale = Vector2( 0.2, 0.5 )
+
+[node name="Platform3" parent="Stage_Platforms" index="1" instance=ExtResource( 2 )]
+position = Vector2( 416.276, 190.979 )
+scale = Vector2( 0.2, 0.5 )
+
+[node name="Platform4" parent="Stage_Platforms" index="2" instance=ExtResource( 2 )]
+position = Vector2( 418.912, 75.0316 )
+rotation = 1.5708
+scale = Vector2( 0.2, 0.5 )
+
+[node name="Player" parent="." index="4"]
+position = Vector2( 542.988, 81.2344 )
+
+[node name="LevelCounter" parent="." index="5"]
+text = "21/22"
+
+[node name="Spikes" type="Node2D" parent="." index="6"]
+
+[node name="Spike" parent="Spikes" index="0" instance=ExtResource( 5 )]
+position = Vector2( 752.15, 287.675 )
+
+[node name="Spike2" parent="Spikes" index="1" instance=ExtResource( 5 )]
+position = Vector2( 752.15, 350.533 )
+
+[node name="Spike4" parent="Spikes" index="2" instance=ExtResource( 5 )]
+position = Vector2( 480.515, 287.675 )
+
+[node name="Spike5" parent="Spikes" index="3" instance=ExtResource( 5 )]
+position = Vector2( 480.515, 350.533 )
+
+[editable path="AntiGravity/Anti_gravity"]
+
+[editable path="AntiGravity/Anti_gravity2"]

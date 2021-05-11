@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://World/Level1.gd" type="Script" id=1]
+[ext_resource path="res://Tilesets/Finish.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Fonts/Roboto/Roboto-Thin.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Tilesets/Platform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 3 )
+
+[node name="Level1" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1201.0
+margin_bottom = 677.0
+color = Color( 0.14902, 0.27451, 0.32549, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 418.601
+margin_top = 34.0817
+margin_right = 771.601
+margin_bottom = 154.082
+custom_fonts/font = SubResource( 1 )
+text = "Leftclick and hold to aim 
+Release Leftclick to move
+Press R when you know you dead"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 1110.0
+margin_top = 620.0
+margin_right = 1176.0
+margin_bottom = 658.0
+custom_fonts/font = SubResource( 1 )
+text = "1/22"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stage_platforms" type="Node2D" parent="."]
+
+[node name="Platform" parent="Stage_platforms" instance=ExtResource( 4 )]
+position = Vector2( 619.52, 348.763 )
+scale = Vector2( 0.903582, 0.568665 )
+
+[node name="Finish" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1014.03, 283.371 )
+
+[node name="Player" parent="." instance=ExtResource( 7 )]
+position = Vector2( 239.283, 93.7417 )
+
+[editable path="Stage_platforms/Platform"]

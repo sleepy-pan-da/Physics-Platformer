@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://World/Level_Template.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Level17.gd" type="Script" id=2]
+[ext_resource path="res://Tilesets/Platform.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Tilesets/Anti_gravity.tscn" type="PackedScene" id=4]
+
+[node name="Level17" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Finish" parent="." index="1"]
+position = Vector2( 603.725, 105.181 )
+
+[node name="AntiGravity" type="Node2D" parent="." index="2"]
+
+[node name="Anti_gravity" parent="AntiGravity" index="0" instance=ExtResource( 4 )]
+position = Vector2( 558.272, 321.024 )
+
+[node name="Stage_Platforms" type="Node2D" parent="." index="3"]
+
+[node name="Platform" parent="Stage_Platforms" index="0" instance=ExtResource( 3 )]
+position = Vector2( 567.966, 543.272 )
+
+[node name="Platform2" parent="Stage_Platforms" index="1" instance=ExtResource( 3 )]
+position = Vector2( 599.323, 137.874 )
+scale = Vector2( 0.1, 0.2 )
+
+[node name="Platform3" parent="Stage_Platforms" index="2" instance=ExtResource( 3 )]
+position = Vector2( 853.813, 297.228 )
+scale = Vector2( 0.1, 0.2 )
+
+[node name="Player" parent="." index="4"]
+position = Vector2( 157.145, 356.943 )
+
+[node name="LevelCounter" parent="." index="5"]
+text = "17/22"

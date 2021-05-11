@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tilesets/Platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Level_Template.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/Level8.gd" type="Script" id=3]
+
+[node name="Level8" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+
+[node name="Finish" parent="." index="1"]
+position = Vector2( 185.708, 70.3027 )
+
+[node name="Player" parent="." index="2"]
+position = Vector2( 178, 506 )
+
+[node name="Stage_Platforms" type="Node2D" parent="." index="3"]
+
+[node name="Platform" parent="Stage_Platforms" index="0" instance=ExtResource( 1 )]
+position = Vector2( 181.839, 617.354 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Platform2" parent="Stage_Platforms" index="1" instance=ExtResource( 1 )]
+position = Vector2( 515.839, 491.354 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Platform3" parent="Stage_Platforms" index="2" instance=ExtResource( 1 )]
+position = Vector2( 861.839, 343.354 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Platform4" parent="Stage_Platforms" index="3" instance=ExtResource( 1 )]
+position = Vector2( 519.839, 207.354 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Platform5" parent="Stage_Platforms" index="4" instance=ExtResource( 1 )]
+position = Vector2( 185.839, 107.354 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="LevelCounter" parent="." index="4"]
+text = "8/22"
